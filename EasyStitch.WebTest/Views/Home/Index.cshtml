@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<div ng-app="easyStitchApp" ng-controller="colorsController">
+
+    @*<p>Input something in the input box:</p>
+        <p>Name: <input type="text" ng-model="name" value="John"></p>
+        <p ng-bind="name"></p>*@
+
+
+    <table>
+        <thead>
+            <tr><th colspan="4">Colors</th></tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="color in colorsList">
+                <td>{{$index + 1}}</td>
+                <td>{{color.name}}</td>
+                <td>{{color.value}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
